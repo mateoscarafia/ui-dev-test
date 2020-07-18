@@ -1,17 +1,17 @@
 
-#React Boilerplate
+# React Boilerplate
 
-##Description
+## Description
 ```bash
 React boilerplate with React Hooks, Redux and Bootstrap
 ```
 
-##Installation:
+## Installation:
 ```bash
 npm install
 ```
 
-##Run application:
+## Run application:
 ```bash
 npm start
 ```
