@@ -16,7 +16,8 @@ const reducer = (state = defaultState, action) => {
       const newState = {
         ...state,
         getPokemonsData: action.payload,
-        getPokemonsPending: false
+        getPokemonsPending: false,
+        getPokemonsFailure: false,
       };
       return newState;
     }
