@@ -19,7 +19,7 @@ const HttpRequest = (config) => {
                 dispatch(ACTION.action({ type: config.failure, payload: null }))
             });
         })()
-    }, [config.data]);
+    }, [dispatch,config.data,config.begin, config.method, config.url, config.failure, config.success]);
 };
 
 export default HttpRequest;

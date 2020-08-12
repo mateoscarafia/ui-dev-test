@@ -20,8 +20,6 @@ function Home() {
         failure: ACTION_TYPES.POST_TEXT_FAILURE
     })
 
-    console.log(data)
-
     return (
         <div>
             <div className="container">
