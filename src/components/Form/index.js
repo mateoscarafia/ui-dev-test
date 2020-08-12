@@ -15,11 +15,11 @@ function Form(props) {
     return (
         <form onSubmit={handleSubmit} className="form-inline" style={{ margin: 40 }}>
             <div className="form-group mx-sm-3 mb-2">
-                <input onChange={event => {
+                <input data-testid='input' onChange={event => {
                     setText(event.target.value);
                 }} type="text" className="form-control" placeholder="Escribe algo..." />
             </div>
-            <button type="submit" className="btn btn-primary mb-2">Enviar</button>
+            <button data-testid='button' type="submit" className="btn btn-primary mb-2">{props.buttonlabel}</button>
         </form>
     );
 }

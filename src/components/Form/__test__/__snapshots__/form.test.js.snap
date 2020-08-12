@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches snapshot 1`] = `
+<form
+  className="form-inline"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "margin": 40,
+    }
+  }
+>
+  <div
+    className="form-group mx-sm-3 mb-2"
+  >
+    <input
+      className="form-control"
+      data-testid="input"
+      onChange={[Function]}
+      placeholder="Escribe algo..."
+      type="text"
+    />
+  </div>
+  <button
+    className="btn btn-primary mb-2"
+    data-testid="button"
+    type="submit"
+  >
+    Enviar
+  </button>
+</form>
+`;

@@ -20,11 +20,13 @@ function Home() {
         failure: ACTION_TYPES.POST_TEXT_FAILURE
     })
 
+    console.log(data)
+
     return (
         <div>
             <div className="container">
-                <Form sendForm={(formBody) => { setBody(formBody) }} />
-                {<p>{data?.text}</p>}
+                <Form buttonlabel='Enviar' sendForm={(formBody) => { setBody(formBody) }} />
+                {<p data-testid='show-text'>{data?.text}</p>}
             </div>
         </div>
     );
