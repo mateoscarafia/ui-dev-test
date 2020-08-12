@@ -15,8 +15,8 @@ function Home() {
     const [body, setBody] = useState(null);
 
     HttpRequest({
-        url: URL.POST_TEXT.url,
-        method: URL.POST_TEXT.method,
+        url: URL.POST_FORM.url,
+        method: URL.POST_FORM.method,
         data: body,
         begin: ACTION_TYPES.POST_FORM_BEGIN,
         success: ACTION_TYPES.POST_FORM_SUCCESS,
