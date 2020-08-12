@@ -1,32 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Matches snapshot 1`] = `
-<form
-  className="form-inline"
-  onSubmit={[Function]}
+<div
+  className="row"
   style={
     Object {
-      "margin": 40,
+      "marginTop": 30,
+      "width": "100%",
     }
   }
 >
   <div
-    className="form-group mx-sm-3 mb-2"
+    className="col-lg-4 col-md-6 col-sm-12 col-xs-12"
   >
-    <input
-      className="form-control"
-      data-testid="input"
-      onChange={[Function]}
-      placeholder="Escribe algo..."
-      type="text"
-    />
+    <h5>
+      Alta conductor
+    </h5>
+    <p>
+      Ingrese datos correspondientes
+    </p>
+    <form
+      className="form-group"
+      onSubmit={[Function]}
+      style={
+        Object {
+          "margin": 40,
+        }
+      }
+    >
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          data-testid="input"
+          onChange={[Function]}
+          placeholder="Nombre"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          data-testid="input"
+          onChange={[Function]}
+          placeholder="Edad"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          data-testid="input"
+          onChange={[Function]}
+          placeholder="Telefono"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          data-testid="input"
+          onChange={[Function]}
+          placeholder="Email"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          data-testid="input"
+          onChange={[Function]}
+          placeholder="Modelo"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          data-testid="input"
+          onChange={[Function]}
+          placeholder="Año"
+          type="text"
+        />
+      </div>
+      <button
+        className="btn btn-primary mb-2"
+        data-testid="button"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+        type="submit"
+      >
+        Enviar
+      </button>
+    </form>
   </div>
-  <button
-    className="btn btn-primary mb-2"
-    data-testid="button"
-    type="submit"
-  >
-    Enviar
-  </button>
-</form>
+  <div
+    className="col-lg-6 col-md-4 col-sm-12 col-xs-12"
+    style={
+      Object {
+        "backgroundImage": "url(../../../assets/images/uber.png)",
+        "height": 500,
+      }
+    }
+  />
+</div>
 `;
