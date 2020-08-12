@@ -1,9 +1,9 @@
 
-# React Boilerplate
+# React App
 
 ## Description
 ```bash
-React boilerplate with React Hooks, Redux and Bootstrap
+React Hooks, Redux and Bootstrap App
 ```
 
 ## Installation:
@@ -16,4 +16,8 @@ npm install
 npm start
 ```
 
-# toolbox-frontend
+## Run unit-testing:
+```bash
+npm run test
+```
+
