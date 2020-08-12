@@ -5,27 +5,27 @@ const defaultState = initialState
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
-    case LIST_ACTION_TYPES.POST_TEXT_BEGIN: {
+    case LIST_ACTION_TYPES.POST_FORM_BEGIN: {
       const newState = {
         ...state,
-        postTextPending: true
+        postFormPending: true
       };
       return newState;
     }
-    case LIST_ACTION_TYPES.POST_TEXT_SUCCESS: {
+    case LIST_ACTION_TYPES.POST_FORM_SUCCESS: {
       const newState = {
         ...state,
-        postTextData: action.payload,
-        postTextPending: false,
-        postTextFailure: false,
+        postFormData: action.payload,
+        postFormPending: false,
+        postFormFailure: false,
       };
       return newState;
     }
-    case LIST_ACTION_TYPES.POST_TEXT_FAILURE: {
+    case LIST_ACTION_TYPES.POST_FORM_FAILURE: {
       const newState = {
         ...state,
-        postTextFailure: true,
-        postTextPending: false
+        postFormFailure: true,
+        postFormPending: false
       };
       return newState;
     }

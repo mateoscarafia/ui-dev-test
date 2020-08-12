@@ -1,7 +1,7 @@
 const initialState = {
-    postTextPending: false,
-    postTextError: null,
-    postTextData: null
+    postFormPending: false,
+    postFormError: null,
+    postFormData: null
 };
 
 export default initialState;

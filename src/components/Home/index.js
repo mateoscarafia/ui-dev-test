@@ -4,6 +4,9 @@ import ACTION_TYPES from '../../redux/actionTypes'
 import HttpRequest from '../../http/httpRequest'
 import URL from '../../http/urls'
 
+import Nav from '../Nav';
+import Footer from '../Footer';
+import Slider from '../Slider';
 import Form from '../Form';
 
 function Home() {
@@ -15,17 +18,20 @@ function Home() {
         url: URL.POST_TEXT.url,
         method: URL.POST_TEXT.method,
         data: body,
-        begin: ACTION_TYPES.POST_TEXT_BEGIN,
-        success: ACTION_TYPES.POST_TEXT_SUCCESS,
-        failure: ACTION_TYPES.POST_TEXT_FAILURE
+        begin: ACTION_TYPES.POST_FORM_BEGIN,
+        success: ACTION_TYPES.POST_FORM_SUCCESS,
+        failure: ACTION_TYPES.POST_FORM_FAILURE
     })
 
     return (
         <div>
+            <Nav />
+            <Slider />
             <div className="container">
                 <Form buttonlabel='Enviar' sendForm={(formBody) => { setBody(formBody) }} />
                 {<p data-testid='show-text'>{data?.text}</p>}
             </div>
+            <Footer />
         </div>
     );
 }
