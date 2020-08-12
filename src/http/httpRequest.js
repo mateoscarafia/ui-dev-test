@@ -6,7 +6,7 @@ import axios from 'axios';
 const HttpRequest = (config) => {
     const dispatch = useDispatch()
     useEffect(() => {
-        (() => {
+        config.data && (() => {
             dispatch(ACTION.action({ type: config.begin, payload: null }))
             axios({
                 method: config.method,
@@ -19,7 +19,7 @@ const HttpRequest = (config) => {
                 dispatch(ACTION.action({ type: config.failure, payload: null }))
             });
         })()
-    }, [dispatch, config.url, config.method, config.begin, config.success, config.failure, config.data]);
+    }, [config.data]);
 };
 
 export default HttpRequest;

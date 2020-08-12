@@ -1,4 +1,4 @@
 const requests = {
-    GET_POKEMONS: { url: 'https://pokeapi.co/api/v2/pokemon', method: 'GET' }
+    POST_TEXT: { url: 'http://localhost:4000/', method: 'POST' }
 };
 export default requests;

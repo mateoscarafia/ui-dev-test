@@ -86,11 +86,6 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="footer-copyright text-center py-3">
-            <img src="../../../assets/images/ecologo.png" style={{width:'50px'}} alt="..." />
-            <br/><br/>
-            <p> © 2020 Copyright: Ecosoft</p>
-            </div>
         </div>
     );
 }

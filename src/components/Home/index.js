@@ -1,35 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux'
 import ACTION_TYPES from '../../redux/actionTypes'
 import HttpRequest from '../../http/httpRequest'
 import URL from '../../http/urls'
 
-import Nav from '../Nav';
-import Slider from '../Slider';
-import Footer from '../Footer';
-import Card from '../Card';
+import Form from '../Form';
 
 function Home() {
 
-    const data = useSelector(state => state.getPokemonsData);
+    const data = useSelector(state => state.postTextData);
+    const [body, setBody] = useState(null);
 
     HttpRequest({
-        url: URL.GET_POKEMONS.url,
-        method: URL.GET_POKEMONS.method,
-        data: null,
-        begin: ACTION_TYPES.GET_POKEMONS_BEGIN,
-        success: ACTION_TYPES.GET_POKEMONS_SUCCESS,
-        failure: ACTION_TYPES.GET_POKEMONS_FAILURE
+        url: URL.POST_TEXT.url,
+        method: URL.POST_TEXT.method,
+        data: body,
+        begin: ACTION_TYPES.POST_TEXT_BEGIN,
+        success: ACTION_TYPES.POST_TEXT_SUCCESS,
+        failure: ACTION_TYPES.POST_TEXT_FAILURE
     })
 
     return (
         <div>
-            <Nav />
-            <Slider />
             <div className="container">
-                {data && <Card data={data} />}
+                <Form sendForm={(formBody) => { setBody(formBody) }} />
+                {<p>{data?.text}</p>}
             </div>
-            <Footer />
         </div>
     );
 }

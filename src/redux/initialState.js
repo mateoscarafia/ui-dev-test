@@ -1,7 +1,7 @@
 const initialState = {
-    getPokemonsPending: false,
-    getPokemonsError: null,
-    getPokemonsData: null
+    postTextPending: false,
+    postTextError: null,
+    postTextData: null
 };
 
 export default initialState;

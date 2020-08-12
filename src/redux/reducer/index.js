@@ -5,27 +5,27 @@ const defaultState = initialState
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
-    case LIST_ACTION_TYPES.GET_POKEMONS_BEGIN: {
+    case LIST_ACTION_TYPES.POST_TEXT_BEGIN: {
       const newState = {
         ...state,
-        getPokemonsPending: true
+        postTextPending: true
       };
       return newState;
     }
-    case LIST_ACTION_TYPES.GET_POKEMONS_SUCCESS: {
+    case LIST_ACTION_TYPES.POST_TEXT_SUCCESS: {
       const newState = {
         ...state,
-        getPokemonsData: action.payload,
-        getPokemonsPending: false,
-        getPokemonsFailure: false,
+        postTextData: action.payload,
+        postTextPending: false,
+        postTextFailure: false,
       };
       return newState;
     }
-    case LIST_ACTION_TYPES.GET_POKEMONS_FAILURE: {
+    case LIST_ACTION_TYPES.POST_TEXT_FAILURE: {
       const newState = {
         ...state,
-        getPokemonsFailure: true,
-        getPokemonsPending: false
+        postTextFailure: true,
+        postTextPending: false
       };
       return newState;
     }
